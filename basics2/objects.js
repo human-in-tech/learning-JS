@@ -47,3 +47,12 @@ user2.greetings();
 let user3 = Object.assign({}, user1, user2); // this will merge the two objects
 // {} is the target object, user1 and user2 are the source objects
 console.log(user3);
+// or, we use the spread operator
+let user4 = {...user1, ...user2}; // this will merge the two objects
+console.log(user4);
+
+// Object.keys() - returns an array of the object's keys
+user3.hasOwnProperty("name"); // returns true if the object has the specified property
+
+const {location : loc} = user1 // destructuring assignment
+console.log(loc); // this will print the value of location
